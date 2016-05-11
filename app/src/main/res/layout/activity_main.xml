@@ -7,10 +7,33 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/background_1"
     tools:context="fr.canm.cyrilstern1.cnamtp9.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="SMS SERVICE"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="START SERVICE"
+        android:id="@+id/startButton"
+        android:layout_marginTop="101dp"
+        android:layout_below="@+id/textView"
+        android:onClick="startService"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="STOP SERVICE"
+        android:id="@+id/stopButton"
+        android:onClick="stopService"
+        android:layout_below="@+id/startButton"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -4,10 +4,11 @@ package fr.canm.cyrilstern1.cnamtp9;
 // Declare any non-default types here with import statements
 
 interface SmsAIDL {
-    /**
-     * Demonstrates some basic types that you can use as parameters
-     * and return values in AIDL.
-     */
-    void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
-            double aDouble, String aString);
+     void startSMSInterceptor();
+     void stopSMSInterceptor();
+
+     // ..
+     long interceptedSMS();
+     String lastSMSReceived();
+     String lastSMSIntercepted();
 }

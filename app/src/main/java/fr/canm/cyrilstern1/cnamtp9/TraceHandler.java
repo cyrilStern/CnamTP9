@@ -2,6 +2,7 @@ package fr.canm.cyrilstern1.cnamtp9;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -22,12 +23,15 @@ public class TraceHandler extends ChainHandler<String> {
     }
 
     public boolean handleRequest(String value){
+
         Calendar c = Calendar.getInstance();
         DateFormat df = DateFormat.getDateInstance(DateFormat.SHORT, Locale.FRANCE);
         DateFormat dt = DateFormat.getTimeInstance(DateFormat.SHORT, Locale.FRANCE);
         String date = df.format(c.getTime()) + "-" + dt.format(c.getTime());
-        if(I) Log.i("ToastChainHandler", date + " handleRequest: " + value );
-        //Toast.makeText(context,"value: " + value,Toast.LENGTH_LONG).show();
+        Log.i("ToastChainHandler", date + " handleRequest: " + value );
+
+        Toast.makeText(context, "receiving  sms", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,"value: " + value,Toast.LENGTH_LONG).show();
         //if(I) Log.i("ToastChainHandler","handleRequest: " + value );
         return super.handleRequest(value);
     }
