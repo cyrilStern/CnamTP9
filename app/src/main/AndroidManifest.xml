@@ -39,10 +39,7 @@
             android:enabled="true"
             android:exported="true"
             android:process="seja.process.smsProcess" />
-        <service
-            android:name=".SmsService.SmsService3"
-            android:enabled="true"
-            android:exported="true"></service>
+
     </application>
 
 </manifest>
